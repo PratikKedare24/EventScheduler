@@ -1,14 +1,8 @@
-package com.eventscheduler.entity;
+package com.eventscheduler.dto;
 
 import java.time.LocalDate;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-
-@Entity
-public class Event {
-	
-	@Id
+public class EventDTO {
 	private Integer eventId;
 	private String name;
 	private LocalDate eventDate;
@@ -16,19 +10,6 @@ public class Event {
 	private Integer maxCount;
 	
 	
-	public Event() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-	
-	public Event(Integer eventId, String name, LocalDate eventDate, String venue, Integer maxCount) {
-		super();
-		this.eventId = eventId;
-		this.name = name;
-		this.eventDate = eventDate;
-		this.venue = venue;
-		this.maxCount = maxCount;
-	}
 
 	public Integer getEventId() {
 		return eventId;
@@ -60,9 +41,6 @@ public class Event {
 	public void setMaxCount(Integer maxCount) {
 		this.maxCount = maxCount;
 	}
-	
-	
-	
 	
 	
 
